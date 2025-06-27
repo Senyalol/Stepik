@@ -1,16 +1,17 @@
-package com.Stepik.Stepik.Classes;
+package com.Stepik.Stepik.Classes.ParentClassesAccounts;
 
-enum AccountType {
-    SAVING_ACCOUNT,    // Сберегательный счёт
-    CHECKING_ACCOUNT,   // Текущий счёт
-    FIXED_ACCOUNT,      // Срочный вклад
-    DEPOSIT_ACCOUNT,    // Депозитный счёт
-    WITHDRAW_ACCOUNT    // Счёт с особыми условиями снятия
-}
 
 public class Account {
 
-    private AccountType accountType;
+    private enum AccountType {
+        SAVING_ACCOUNT,    // Сберегательный счёт
+        CHECKING_ACCOUNT,   // Текущий счёт
+        FIXED_ACCOUNT,      // Срочный вклад
+        DEPOSIT_ACCOUNT,    // Депозитный счёт
+        WITHDRAW_ACCOUNT    // Счёт с особыми условиями снятия
+    }
+
+
     private String id;
     private String clientID;
     private double balance;

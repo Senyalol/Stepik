@@ -1,10 +1,11 @@
 package com.Stepik.Stepik.Interfaces;
 
-import com.Stepik.Stepik.Classes.Account;
-import com.Stepik.Stepik.Classes.AccountWithdraw;
+import com.Stepik.Stepik.Classes.ParentClassesAccounts.Account;
+import com.Stepik.Stepik.Classes.ParentClassesAccounts.AccountWithdraw;
 
 import java.util.List;
 
+//Интерфейс класса отвечающего за работу со счетами в памяти
 public interface AccountDAO {
 
     //Метод для получения аккаунтов по ID клиента
@@ -17,7 +18,7 @@ public interface AccountDAO {
     public void updateAccount(Account account);
 
     //Получить аккаунт клиента по типу аккаунта
-   // public List<Account> getClientAccountsByType(String clientID, AccountType accountType)
+    // public List<Account> getClientAccountsByType(String clientID, AccountType accountType)
 
     //Получить акаунт через доступ клиента
     public AccountWithdraw getClientWithdrawAccount(String clientID , String accountID);

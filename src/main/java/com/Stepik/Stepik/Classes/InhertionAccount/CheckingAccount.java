@@ -1,9 +1,12 @@
-package com.Stepik.Stepik.Classes;
+package com.Stepik.Stepik.Classes.InhertionAccount;
+
+import com.Stepik.Stepik.Classes.ParentClassesAccounts.AccountType;
+import com.Stepik.Stepik.Classes.ParentClassesAccounts.AccountWithdraw;
 
 //Можно снимать и пополнять деньги с этого счета
 public class CheckingAccount extends AccountWithdraw {
 
-    public CheckingAccount(AccountType accountType ,String id, String clientID, double balance, boolean withdraw) {
+    public CheckingAccount(AccountType accountType , String id, String clientID, double balance, boolean withdraw) {
         super(accountType, id, clientID, balance, withdraw);
     }
 
@@ -20,3 +23,4 @@ public class CheckingAccount extends AccountWithdraw {
     }
 
 }
+

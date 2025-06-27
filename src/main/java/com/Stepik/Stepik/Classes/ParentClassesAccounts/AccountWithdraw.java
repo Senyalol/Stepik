@@ -1,4 +1,4 @@
-package com.Stepik.Stepik.Classes;
+package com.Stepik.Stepik.Classes.ParentClassesAccounts;
 
 //Счет в котором можно снимать и вносить деньги
 public class AccountWithdraw extends Account {
@@ -20,3 +20,4 @@ public class AccountWithdraw extends Account {
     }
 
 }
+

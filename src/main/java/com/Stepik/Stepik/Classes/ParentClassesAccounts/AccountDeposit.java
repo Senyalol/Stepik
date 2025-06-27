@@ -1,4 +1,4 @@
-package com.Stepik.Stepik.Classes;
+package com.Stepik.Stepik.Classes.ParentClassesAccounts;
 
 //Счет в котором можно только снимать
 public class AccountDeposit extends Account {

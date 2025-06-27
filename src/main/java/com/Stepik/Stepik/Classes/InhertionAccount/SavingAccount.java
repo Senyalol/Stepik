@@ -1,4 +1,7 @@
-package com.Stepik.Stepik.Classes;
+package com.Stepik.Stepik.Classes.InhertionAccount;
+
+import com.Stepik.Stepik.Classes.ParentClassesAccounts.AccountType;
+import com.Stepik.Stepik.Classes.ParentClassesAccounts.AccountWithdraw;
 
 //Можно снимать и пополнять с этого счета
 public class SavingAccount extends AccountWithdraw {
