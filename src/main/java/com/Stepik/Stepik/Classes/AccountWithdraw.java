@@ -1,0 +1,22 @@
+package com.Stepik.Stepik.Classes;
+
+//Счет в котором можно снимать и вносить деньги
+public class AccountWithdraw extends Account {
+
+    public AccountWithdraw(AccountType accountType ,String id , String clientID, double balance, boolean withdrawal) {
+        super(accountType, id, clientID, balance, withdrawal);
+    }
+
+    //Внести деньги
+    @Override
+    protected void setBalance(double balance) {
+        super.setBalance(balance);
+    }
+
+    //Получить деньги
+    @Override
+    protected double getBalance() {
+        return super.getBalance();
+    }
+
+}
