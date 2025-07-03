@@ -3,19 +3,20 @@ package com.Stepik.Stepik.Classes.ParentClassesAccounts;
 
 public class Account {
 
-    private enum AccountType {
-        SAVING_ACCOUNT,    // Сберегательный счёт
-        CHECKING_ACCOUNT,   // Текущий счёт
-        FIXED_ACCOUNT,      // Срочный вклад
-        DEPOSIT_ACCOUNT,    // Депозитный счёт
-        WITHDRAW_ACCOUNT    // Счёт с особыми условиями снятия
-    }
-
-
+    private AccountType accountType;
     private String id;
     private String clientID;
     private double balance;
     private boolean withdrawAllowed;
+
+    //Конструктор класса
+    public Account(AccountType accountType1,String id, String clientID, double balance, boolean withdrawAllowed) {
+        this.accountType = accountType1;
+        this.id = id;
+        this.clientID = clientID;
+        this.balance = balance;
+        this.withdrawAllowed = withdrawAllowed;
+    }
 
     //Узнать какой у этого счета тип
     public AccountType getAccountType(){
@@ -47,15 +48,6 @@ public class Account {
     //Сеттер id клиента
     public void setClientID(String clientID) {
         this.clientID = clientID;
-    }
-
-    //Конструктор класса
-    public Account(AccountType accountType1,String id, String clientID, double balance, boolean withdrawAllowed) {
-        this.accountType = accountType1;
-        this.id = id;
-        this.clientID = clientID;
-        this.balance = balance;
-        this.withdrawAllowed = withdrawAllowed;
     }
 
     //Геттер доступа

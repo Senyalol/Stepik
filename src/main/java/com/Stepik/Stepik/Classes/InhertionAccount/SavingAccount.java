@@ -1,5 +1,6 @@
 package com.Stepik.Stepik.Classes.InhertionAccount;
 
+//import com.Stepik.Stepik.Classes.ParentClassesAccounts.AccountType;
 import com.Stepik.Stepik.Classes.ParentClassesAccounts.AccountType;
 import com.Stepik.Stepik.Classes.ParentClassesAccounts.AccountWithdraw;
 

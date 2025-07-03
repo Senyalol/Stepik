@@ -9,7 +9,7 @@ public class AccountDeposit extends Account {
 
     //Снять со счета
     @Override
-    protected double getBalance() {
+    public double getBalance() {
         return super.getBalance();
     }
 
