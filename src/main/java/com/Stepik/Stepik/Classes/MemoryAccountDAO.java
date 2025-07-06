@@ -44,9 +44,8 @@ public class MemoryAccountDAO implements AccountDAO {
 
             if(account.getClientID().equals(clientID) && account.getId().equals(accountID)) {
 
-                if(account.getAccountType() == AccountType.SAVING_ACCOUNT
-                       || account.getAccountType()== AccountType.CHECKING_ACCOUNT
-                       || account.getAccountType() == AccountType.WITHDRAW_ACCOUNT){
+                if(account.getAccountType() == AccountType.SAVING
+                       || account.getAccountType()== AccountType.CHECKING){
 
                     return (AccountWithdraw)account;
 

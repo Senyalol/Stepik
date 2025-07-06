@@ -29,9 +29,8 @@ public class AccountCreationServiceImpl implements AccountCreationService {
 
         boolean withdraw = false;
 
-        if(accountType == AccountType.WITHDRAW_ACCOUNT
-                || accountType == AccountType.SAVING_ACCOUNT
-                || accountType == AccountType.CHECKING_ACCOUNT) {
+        if(accountType == AccountType.SAVING
+                || accountType == AccountType.CHECKING) {
 
             withdraw = true;
 
