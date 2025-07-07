@@ -10,12 +10,17 @@ public class MyCLI implements CLIUI {
 
     private Scanner scanner;
 
-    MyCLI() {
+    public MyCLI() {
         this.scanner = new Scanner(System.in);
     }
 
     MyCLI(Scanner scanner) {
         this.scanner = scanner;
+    }
+
+    //Геттер сканера
+    public Scanner getScanner() {
+        return scanner;
     }
 
     //Ввести сумму баланса для клиента

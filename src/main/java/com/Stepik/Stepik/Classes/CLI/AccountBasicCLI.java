@@ -13,7 +13,7 @@ public class AccountBasicCLI {
     private AccountListingService accountListing;
 
     //Конструктор класса
-    AccountBasicCLI(CreateAccountOperationUI createAccountOperationUI, BankCore bankCore, AccountListingService accountListing) {
+    public AccountBasicCLI(CreateAccountOperationUI createAccountOperationUI, BankCore bankCore, AccountListingService accountListing) {
 
         this.createAccountOperationUI = createAccountOperationUI;
         this.bankCore = bankCore;

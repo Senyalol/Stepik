@@ -10,7 +10,7 @@ public class BankCore {
     AccountCreationService accountCreation;
 
     //Коснтруктор класса банка
-    BankCore(AccountCreationService accountCreationService) {
+    public BankCore(AccountCreationService accountCreationService) {
         this.accountCreation = accountCreationService;
     }
 
