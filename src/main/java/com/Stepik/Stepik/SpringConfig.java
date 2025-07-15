@@ -35,7 +35,7 @@ public class SpringConfig {
 
     @Bean
     AccountListingServiceImpl accountListingService() {
-        return new AccountListingServiceImpl();
+        return new AccountListingServiceImpl(memoryAccountDAO());
     }
 
     @Bean

@@ -1,6 +1,8 @@
 package com.Stepik.Stepik.Classes.ParentClassesAccounts;
 
 
+import java.util.Objects;
+
 public class Account {
 
     private AccountType accountType;
@@ -12,7 +14,7 @@ public class Account {
     //Конструктор класса
     public Account(AccountType accountType1,String id, String clientID, double balance, boolean withdrawAllowed) {
         this.accountType = accountType1;
-        this.id = id;
+        this.id = String.format("%03d%06d", Integer.parseInt(clientID), Integer.parseInt(id));
         this.clientID = clientID;
         this.balance = balance;
         this.withdrawAllowed = withdrawAllowed;
@@ -36,8 +38,8 @@ public class Account {
     //Вывод данных о классе
     @Override
     public String toString(){
-        String accountNumber = String.format("%03d%06d", 1, id);
-        return accountNumber;
+        return String.format("Account{id=%s, clientID=%s, balance=%.2f}",
+                id, clientID, balance);
     }
 
     //Геттер id клиента

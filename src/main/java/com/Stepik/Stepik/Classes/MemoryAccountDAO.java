@@ -12,7 +12,7 @@ import java.util.List;
 public class MemoryAccountDAO implements AccountDAO {
 
     //Хранилище счетов
-    private List<Account> accountList = new ArrayList<>();
+    private final List<Account> accountList = new ArrayList<>();
 
     //Получить список аккаунтов
     @Override

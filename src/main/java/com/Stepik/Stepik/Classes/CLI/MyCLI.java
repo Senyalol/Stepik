@@ -47,14 +47,14 @@ public class MyCLI implements CLIUI {
         System.out.println("Choose account type");
         System.out.println(Arrays.toString(AccountType.values()));
 
-        if(AccountType.valueOf(scanner.nextLine()) != null){
+        String certainAccountType = scanner.next();
+        AccountType certainAT = AccountType.valueOf(certainAccountType);
 
-            System.out.println("Bank account created");
-            return AccountType.valueOf(scanner.nextLine());
+        if(certainAccountType != null){
+
+            return certainAT;
 
         }
-
-
 
         return null;
 

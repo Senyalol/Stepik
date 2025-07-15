@@ -19,6 +19,7 @@ public class BankCore {
 
         this.incrementLastAccountNumber();
         accountCreation.create(accountType,id,clientID,lastAccountNumber);
+        System.out.println("Bank account created");
     }
 
     //С каждым созданием нового счета инкрементирует поле (последний номер счета в этом классе)

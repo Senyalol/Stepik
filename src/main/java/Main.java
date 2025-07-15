@@ -16,13 +16,13 @@ public class Main {
 
     private static final String help =
             "Welcome to CLI bank service" +
-            "Enter operationNumber:" +
-                    "1 - show accounts" +
-                    "2 - create account" +
-                    "3 - deposit" +
-                    "4 - withdraw" +
-                    "5 - transfer" +
-                    "6 - this message" +
+            "Enter operationNumber:" + "\n" +
+                    "1 - show accounts" + "\n" +
+                    "2 - create account" + "\n" +
+                    "3 - deposit" + "\n" +
+                    "4 - withdraw" + "\n" +
+                    "5 - transfer" + "\n" +
+                    "6 - this message" + "\n" +
                     "7 - exit";
 
     public static void main(String[] args) {
@@ -43,10 +43,13 @@ public class Main {
 
         while(scanner.hasNext()){
             switch (scanner.next()){
-                case "1": accountBasicCLI.getAccounts(clientId);
-                case "2": accountBasicCLI.createAccountRequest(clientId);
-                case "6" : System.out.println(help);
-                case "7": System.exit(0);
+                case "1" -> accountBasicCLI.getAccounts(clientId);
+
+                case "2" -> accountBasicCLI.createAccountRequest(clientId);
+
+                case "6" -> System.out.println(help);
+
+                case "7" ->  System.exit(0);
             }
         }
 

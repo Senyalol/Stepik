@@ -38,7 +38,6 @@ public class AccountCreationServiceImpl implements AccountCreationService {
 
         String accountIDStr = String.valueOf(accountID);
         Account newAccount = new Account(accountType,accountIDStr,clientID,0,withdraw);
-
         accountDAO.createNewAccount(newAccount);
     }
 }

@@ -13,6 +13,10 @@ public class AccountListingServiceImpl implements AccountListingService {
     //Интерфейс для CRUD операций со счетами
     AccountDAO accountDAO;
 
+    public AccountListingServiceImpl(AccountDAO accountDAO) {
+        this.accountDAO = accountDAO;
+    }
+
     //Получить конкретный счет клиента
     @Override
     public Account getClientAccount(String clientID, String accountID) {
