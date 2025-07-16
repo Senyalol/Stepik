@@ -14,7 +14,7 @@ public class Account {
     //Конструктор класса
     public Account(AccountType accountType1,String id, String clientID, double balance, boolean withdrawAllowed) {
         this.accountType = accountType1;
-        this.id = id; //String.format("%03d%06d", Integer.parseInt(clientID), Integer.parseInt(id));
+        this.id = id;
         this.clientID = clientID;
         this.balance = balance;
         this.withdrawAllowed = withdrawAllowed;
@@ -39,7 +39,7 @@ public class Account {
     @Override
     public String toString(){
         return String.format("Account{id=%s, clientID=%s, balance=%.2f}",
-                id, clientID, balance);
+                String.format("%03d%06d", Integer.parseInt(clientID), Integer.parseInt(id)), clientID, balance);
     }
 
     //Геттер id клиента

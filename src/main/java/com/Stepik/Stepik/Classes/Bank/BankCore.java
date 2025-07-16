@@ -6,7 +6,7 @@ import com.Stepik.Stepik.Interfaces.AccountCreationService;
 public class BankCore {
 
     static long id = 1;
-    long lastAccountNumber = 1;
+    long lastAccountNumber = 0;
     AccountCreationService accountCreation;
 
     //Коснтруктор класса банка
