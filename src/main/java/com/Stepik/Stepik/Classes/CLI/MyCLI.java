@@ -35,10 +35,9 @@ public class MyCLI implements CLIUI {
     public String requestClientAccountNumber(){
 
         System.out.println("Please enter client account number: ");
-        return scanner.nextLine();
+        return scanner.next();
 
     }
-
 
     //Запросить пользователя ввести с клавиатуры тип аккаунта , в данном случае выбрать из существующих
     @Override

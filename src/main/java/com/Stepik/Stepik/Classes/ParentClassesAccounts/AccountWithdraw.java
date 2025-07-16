@@ -9,13 +9,13 @@ public class AccountWithdraw extends Account {
 
     //Внести деньги
     @Override
-    protected void setBalance(double balance) {
+    public void setBalance(double balance) {
         super.setBalance(balance);
     }
 
     //Получить деньги
     @Override
-    protected double getBalance() {
+    public double getBalance() {
         return super.getBalance();
     }
 

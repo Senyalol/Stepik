@@ -1,7 +1,7 @@
 package com.Stepik.Stepik.Classes.ParentClassesAccounts;
 
 
-import java.util.Objects;
+//import java.util.Objects;
 
 public class Account {
 
@@ -14,7 +14,7 @@ public class Account {
     //Конструктор класса
     public Account(AccountType accountType1,String id, String clientID, double balance, boolean withdrawAllowed) {
         this.accountType = accountType1;
-        this.id = String.format("%03d%06d", Integer.parseInt(clientID), Integer.parseInt(id));
+        this.id = id; //String.format("%03d%06d", Integer.parseInt(clientID), Integer.parseInt(id));
         this.clientID = clientID;
         this.balance = balance;
         this.withdrawAllowed = withdrawAllowed;
@@ -53,7 +53,7 @@ public class Account {
     }
 
     //Геттер доступа
-    public boolean IswithdrawAllowed() {
+    public boolean IsWithdrawAllowed() {
         return withdrawAllowed;
     }
 
@@ -74,7 +74,7 @@ public class Account {
 
     //Сеттер баланса
     protected void setBalance(double balance) {
-        this.balance = balance;
+        this.balance += balance;
     }
 
 }

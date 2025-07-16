@@ -1,12 +1,16 @@
 import com.Stepik.Stepik.Classes.Bank.BankCore;
+import com.Stepik.Stepik.Classes.Bank.TransactionDeposit;
+import com.Stepik.Stepik.Classes.Bank.TransactionWithdraw;
 import com.Stepik.Stepik.Classes.CLI.AccountBasicCLI;
 import com.Stepik.Stepik.Classes.CLI.MyCLI;
+import com.Stepik.Stepik.Classes.CLI.TransactionDepositCLI;
+import com.Stepik.Stepik.Classes.CLI.TransactionWithdrawCLI;
 import com.Stepik.Stepik.Classes.MemoryAccountDAO;
 import com.Stepik.Stepik.Classes.Services.AccountCreationServiceImpl;
+import com.Stepik.Stepik.Classes.Services.AccountDepositServiceImpl;
 import com.Stepik.Stepik.Classes.Services.AccountListingServiceImpl;
-import com.Stepik.Stepik.Interfaces.AccountCreationService;
-import com.Stepik.Stepik.Interfaces.AccountDAO;
-import com.Stepik.Stepik.Interfaces.AccountListingService;
+import com.Stepik.Stepik.Classes.Services.AccountWithdrawServiceImpl;
+import com.Stepik.Stepik.Interfaces.*;
 import com.Stepik.Stepik.SpringConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -41,15 +45,27 @@ public class Main {
         AccountListingService accountListingService = context.getBean("accountListingService", AccountListingServiceImpl.class);
         AccountBasicCLI accountBasicCLI = context.getBean("accountBasicCLI", AccountBasicCLI.class);
 
+        TransactionDAO memoryTransactionDAO = context.getBean("memoryTransactionDAO", TransactionDAO.class);
+        AccountDepositService accountDepositService = context.getBean("accountDepositService", AccountDepositServiceImpl.class);
+        AccountWithdrawService accountWithdrawService = context.getBean("accountWithdrawService", AccountWithdrawServiceImpl.class);
+        TransactionDeposit transactionDeposit = context.getBean("transactionDeposit", TransactionDeposit.class);
+        TransactionWithdraw transactionWithdraw = context.getBean("transactionWithdraw", TransactionWithdraw.class);
+        TransactionDepositCLI transactionDepositCLI = context.getBean("transactionDepositCLI", TransactionDepositCLI.class);
+        TransactionWithdrawCLI transactionWithdrawCLI = context.getBean("transactionWithdrawCLI", TransactionWithdrawCLI.class);
+
         while(scanner.hasNext()){
             switch (scanner.next()){
                 case "1" -> accountBasicCLI.getAccounts(clientId);
 
                 case "2" -> accountBasicCLI.createAccountRequest(clientId);
 
-                case "6" -> System.out.println(help);
+                case "3" -> transactionDepositCLI.depositMoney(clientId);
 
-                case "7" ->  System.exit(0);
+                case "4" -> transactionWithdrawCLI.withdrawMoney(clientId);
+
+                case "5" -> System.out.println(help);
+
+                case "6" ->  System.exit(0);
             }
         }
 

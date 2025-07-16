@@ -1,6 +1,8 @@
 package com.Stepik.Stepik.Interfaces;
 
-public interface CLIUI extends CreateAccountOperationUI{
+//Промежуточное звено , обьединяющее все интерфейсы
+public interface CLIUI extends CreateAccountOperationUI , WithdrawDepositOperationCLIUI {
+
 
 
 }
