@@ -42,15 +42,12 @@ public class MemoryAccountDAO implements AccountDAO {
 
         return (AccountWithdraw) accountList.stream()
                 .filter(account -> {
-                    System.out.println("Processing account: " + account);
                     return account instanceof AccountWithdraw;
                 })
                 .filter(account -> {
-                    System.out.println("Checking clientID: " + account.getClientID());
                     return account.getClientID() != null && account.getClientID().equals(clientID);
                 })
                 .filter(account -> {
-                    System.out.println("Checking accountID: " + account.getId());
                     return account.getId() != null && account.getId().equals(accountID);
                 })
                 .filter(Account::IsWithdrawAllowed)

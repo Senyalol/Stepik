@@ -21,9 +21,8 @@ public class TransactionDeposit {
 
             accountDepositService.deposit(summa, sender);
 
-//            Transaction newTransaction = new Transaction(sender, summa);
-//            transactionDAO.addTransaction(newTransaction);
-
+            Transaction newTransaction = new Transaction(sender, summa);
+            transactionDAO.addTransaction(newTransaction);
 
     }
 

@@ -22,8 +22,8 @@ public class TransactionWithdraw {
 
             accountWithdrawService.withdraw(summa, certainAccount);
 
-//            Transaction newTransaction = new Transaction(certainAccount, summa);
-//            transactionDAO.addTransaction(newTransaction);
+            Transaction newTransaction = new Transaction(certainAccount, summa);
+            transactionDAO.addTransaction(newTransaction);
 
         }
 

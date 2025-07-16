@@ -6,6 +6,7 @@ import com.Stepik.Stepik.Classes.CLI.MyCLI;
 import com.Stepik.Stepik.Classes.CLI.TransactionDepositCLI;
 import com.Stepik.Stepik.Classes.CLI.TransactionWithdrawCLI;
 import com.Stepik.Stepik.Classes.MemoryAccountDAO;
+import com.Stepik.Stepik.Classes.MemoryTransactionDAO;
 import com.Stepik.Stepik.Classes.Services.AccountCreationServiceImpl;
 import com.Stepik.Stepik.Classes.Services.AccountDepositServiceImpl;
 import com.Stepik.Stepik.Classes.Services.AccountListingServiceImpl;
@@ -45,13 +46,15 @@ public class Main {
         AccountListingService accountListingService = context.getBean("accountListingService", AccountListingServiceImpl.class);
         AccountBasicCLI accountBasicCLI = context.getBean("accountBasicCLI", AccountBasicCLI.class);
 
-        TransactionDAO memoryTransactionDAO = context.getBean("memoryTransactionDAO", TransactionDAO.class);
+        TransactionDAO memoryTransactionDAO = context.getBean("memoryTransactionDAO", MemoryTransactionDAO.class);
         AccountDepositService accountDepositService = context.getBean("accountDepositService", AccountDepositServiceImpl.class);
         AccountWithdrawService accountWithdrawService = context.getBean("accountWithdrawService", AccountWithdrawServiceImpl.class);
         TransactionDeposit transactionDeposit = context.getBean("transactionDeposit", TransactionDeposit.class);
         TransactionWithdraw transactionWithdraw = context.getBean("transactionWithdraw", TransactionWithdraw.class);
         TransactionDepositCLI transactionDepositCLI = context.getBean("transactionDepositCLI", TransactionDepositCLI.class);
         TransactionWithdrawCLI transactionWithdrawCLI = context.getBean("transactionWithdrawCLI", TransactionWithdrawCLI.class);
+
+
 
         while(scanner.hasNext()){
             switch (scanner.next()){
@@ -63,9 +66,11 @@ public class Main {
 
                 case "4" -> transactionWithdrawCLI.withdrawMoney(clientId);
 
-                case "5" -> System.out.println(help);
+                case "5" -> memoryTransactionDAO.getTransactions();
 
-                case "6" ->  System.exit(0);
+                case "6" -> System.out.println(help);
+
+                case "7" ->  System.exit(0);
             }
         }
 

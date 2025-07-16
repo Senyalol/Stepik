@@ -20,4 +20,10 @@ public class Transaction {
         this.summa = summa;
     }
 
+    @Override
+    public String toString() {
+        String message = "ID клиента: " + this.senderAccount.getClientID() + " ID счета: " + this.senderAccount.getId() + " Сумма транзакции: " + this.summa;
+        return message;
+    }
+
 }
